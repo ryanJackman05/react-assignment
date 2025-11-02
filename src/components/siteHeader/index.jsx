@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from "react-router";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
@@ -96,6 +97,13 @@ const SiteHeader = () => {
                     {opt.label}
                   </Button>
                 ))}
+                <Button
+                    key="profile"
+                    color="inherit"
+                    onClick={() => handleMenuSelect("/profile")}
+                  >
+                  <AccountCircleIcon/>
+                </Button>
               </>
             )}
         </Toolbar>

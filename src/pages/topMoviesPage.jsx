@@ -9,7 +9,7 @@ import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 const TopRatedPage = (props) => {
 
   const { data, error, isPending, isError } = useQuery({
-    queryKey: ['discover'],
+    queryKey: ['movie'], // queryKey must be unique to update movies object
     queryFn: getTopMovies,
   })
 
