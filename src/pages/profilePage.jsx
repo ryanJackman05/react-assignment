@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import TemplateUserPage from "../components/templateUserPage";
 
-const profileObjectName = "userProfile_v1";
+const profileObjectName = "userProfile";
 const DEFAULT_AVATAR =
   "data:image/svg+xml;utf8," +
   encodeURIComponent(
@@ -9,9 +10,9 @@ const DEFAULT_AVATAR =
 
 function loadProfile() {
   try {
-    const raw = localStorage.getItem(profileObjectName);
-    if (!raw) return null;
-    return JSON.parse(raw);
+    const profileObject = localStorage.getItem(profileObjectName);
+    if (!profileObject) return null;
+    return JSON.parse(profileObject);
   } catch {
     return null;
   }
@@ -74,8 +75,8 @@ export default function ProfilePage() {
   }
 
   return (
-    <div style={styles.page}>
-      <h2 style={{ marginTop: 0 }}>Profile</h2>
+    <TemplateUserPage>
+        <h2 style={{ marginTop: 0 }}>Profile</h2>
       <div style={styles.card}>
         <div style={styles.avatarColumn}>
           <img
@@ -146,7 +147,7 @@ export default function ProfilePage() {
           </div>
         </div>
       </div>
-    </div>
+    </TemplateUserPage>
   );
 }
 

@@ -25,7 +25,7 @@ const MoviesContextProvider = (props) => {
   };
 
   const addReview = (movie, review) => {
-    setMyReviews({ ...myReviews, [movie.id]: review })
+    setMyReviews({ ...myReviews, [movie.id]: review }) // set reviews equal to myReviews, plus a new key-value pair that will override or create a new review field
   };
   console.log(myReviews);
 

@@ -100,7 +100,7 @@ const SiteHeader = () => {
                 <Button
                     key="profile"
                     color="inherit"
-                    onClick={() => handleMenuSelect("/profile")}
+                    onClick={() => handleMenuSelect("/user/profile")}
                   >
                   <AccountCircleIcon/>
                 </Button>
